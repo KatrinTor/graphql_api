@@ -14,6 +14,9 @@ country_codes = [
 @pytest.mark.parametrize("country_code", country_codes)
 @allure.title("Проверка соответствия страны заданному коду")
 def test_country_code(country_code):
+    """
+    Тест проверяет соответствия кода и названия страны.
+    """
     code = country_code["code"]
     name = country_code["country_name"]
 
