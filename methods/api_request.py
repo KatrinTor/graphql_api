@@ -22,7 +22,11 @@ def api_request(url, method='POST', **kwargs):
 
     with allure.step(f"{method.upper()}{new_url}"):
         with sessions.Session() as session:
-            response = session.request(method=method, url=new_url, verify=False, **kwargs)
+            response = session.request(
+                method=method,
+                url=new_url,
+                verify=False,
+                **kwargs)
             try:
                 message = (to_curl(response.request)).replace(r'\n', '\n')
                 allure.attach(
@@ -43,12 +47,13 @@ def api_request(url, method='POST', **kwargs):
                     body='empty response',
                     name='Empty Response',
                     attachment_type=AttachmentType.TEXT,
-                    extension='txt'
-                )
+                    extension='txt')
             else:
                 try:
                     allure.attach(
-                        body=json.dumps(response.json(), ensure_ascii=False, indent=4).encode("utf-8"),
+                        body=json.dumps(response.json(),
+                                        ensure_ascii=False,
+                                        indent=4).encode("utf-8"),
                         name="Response Json",
                         attachment_type=AttachmentType.JSON,
                         extension='json'
