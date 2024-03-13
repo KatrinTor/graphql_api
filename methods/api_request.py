@@ -1,19 +1,15 @@
 import json
-import os
 from json import JSONDecodeError
 
 import allure
 from allure_commons.types import AttachmentType
 from curlify import to_curl
-from dotenv import load_dotenv
 from requests import sessions
 
 
 def api_request(url, method='POST', **kwargs):
-    load_dotenv('.env')
     base_urls = {
-        "gql": 'https://countries.trevorblades.com/',
-        "rest": os.getenv('REST_ENDPOINT')
+        "gql": 'https://countries.trevorblades.com/'
     }
     if url == "gql":
         new_url = base_urls["gql"]

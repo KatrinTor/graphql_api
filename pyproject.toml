@@ -6,7 +6,6 @@ authors = ["Katrin Torsunova <katrin.tep@list.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.4"
 pytest = "8.0.2"
 allure-pytest = "2.13.2"
 pytest-check = "2.2.0"
