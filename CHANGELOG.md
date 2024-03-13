@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/KatrinTor/graphql_api/compare/v1.0.0...v1.1.0) (2024-03-13)
+
+
+### Features
+
+* добавлен тест фильтра по названию страны ([#14](https://github.com/KatrinTor/graphql_api/issues/14)) ([c3383b9](https://github.com/KatrinTor/graphql_api/commit/c3383b9bb389be2f2cc13d17f316ff0ef5ee2c7c))
+
 ## 1.0.0 (2024-03-13)
 
 
