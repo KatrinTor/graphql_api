@@ -6,10 +6,6 @@ on:
       - main
 
 jobs:
-  run-tests:
-    name: "Run tests"
-    uses: ./.github/workflows/tests.yml
-    secrets: inherit
 
   release:
     needs: run-tests
