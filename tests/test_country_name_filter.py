@@ -21,10 +21,10 @@ def test_country_name_filter(letter):
 
         response = countries.Request(arguments).gql_request(params=params)
 
-    with allure.step(f"Проверка: в названии страны содержится слово на букву '{letter}'"):
+    with allure.step(f"В имени страны содержится слово на букву '{letter}'"):
         objects = response.json()["data"]["countries"]
         for object in objects:
             words = object["name"].split()
             for word in words:
                 if word.startswith(letter) is False:
-                    print(f'Ошибка: по фильтру {letter} выводится {object["name"]}')
+                    print(f'Ошибка: в {object["name"]} нет слова на {letter}')
