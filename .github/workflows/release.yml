@@ -1,4 +1,4 @@
-name: "Release"
+name: Release
 
 on:
   push:
@@ -8,8 +8,6 @@ on:
 jobs:
 
   release:
-    needs: run-tests
-    name: "Release"
     runs-on: ubuntu-20.04
     permissions: write-all
     env:
