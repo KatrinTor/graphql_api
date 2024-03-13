@@ -7,7 +7,7 @@ country_codes = [
     {"code": "BR", "country_name": "Brazil"},
     {"code": "BY", "country_name": "Belarus"},
     {"code": "AG", "country_name": "Antigua and Barbuda"},
-    {"code": "MA", "country_name": "Moroco"}
+    {"code": "MA", "country_name": "Morocco"}
 ]
 
 
